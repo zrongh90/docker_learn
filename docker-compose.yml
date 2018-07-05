@@ -1,0 +1,16 @@
+version: "3"
+services:
+
+  nginx:
+    image: zrongh/nginx_web:1.2
+    ports:
+     - "8001:8001"
+     - "8000:80"
+    # entrypoint: ["nginx", "-g", "daemon off;"]
+
+  php:
+    image: zabbix_httpd:1.1
+    environment:
+      TARGET_IP: 192.168.43.251 
+    ports:
+     - "80:80"
