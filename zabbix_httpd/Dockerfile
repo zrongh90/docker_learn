@@ -1,9 +1,10 @@
 FROM centos:latest
 MAINTAINER Zirong Huang "397864223@qq.com"
-RUN yum install -y php php-mysql httpd php-bcmath php-mbstring&&\
+RUN yum install -y php php-mysql httpd php-bcmath php-mbstring php-gd&&\
     mkdir /var/www/html/zabbix
 COPY php /var/www/html/zabbix
 RUN chown -R apache:apache /var/www/html
+RUN yum install -y php-xml
 COPY update_info.sh /tmp
 COPY php.ini /etc
 #CMD ["/usr/sbin/apachectl", "-DFOREGROUD", "-e debug"]
