@@ -15,3 +15,9 @@ services:
     ports:
      - "80:80"
     # entrypoint: ["/usr/sbin/httpd"]
+  mysql:
+    image: zabbix_mysql:1.1
+    ports:
+     - "3306:3306"
+    volumes:
+     - "/var/lib/mysql:/var/lib/mysql"
