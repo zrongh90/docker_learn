@@ -9,7 +9,7 @@ services:
     # entrypoint: ["nginx", "-g", "daemon off;"]
 
   php:
-    image: zabbix_httpd:1.4
+    image: zabbix_httpd:1.6
     environment:
       TARGET_IP: 
     ports:
