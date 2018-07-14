@@ -51,7 +51,7 @@ define('ELASTICSEARCH_RESPONSE_DOCUMENTS',		2);
 define('ZBX_WIDGET_ROWS', 20);
 
 define('ZBX_FONTPATH',				realpath('fonts')); // where to search for font (GD > 2.0.18)
-define('ZBX_GRAPH_FONT_NAME',		'DejaVuSans'); // font file name
+define('ZBX_GRAPH_FONT_NAME',		'kaiti'); // font file name
 define('ZBX_GRAPH_LEGEND_HEIGHT',	120); // when graph height is less then this value, some legend will not show up
 
 define('ZBX_SCRIPT_TIMEOUT',		60); // in seconds
@@ -100,7 +100,7 @@ define('EVENTS_OPTION_NOEVENT', 1);
 define('EVENTS_OPTION_ALL',		2);
 define('EVENTS_OPTION_NOT_ACK', 3);
 
-define('ZBX_FONT_NAME', 'DejaVuSans');
+define('ZBX_FONT_NAME', 'kaiti');
 
 define('ZBX_AUTH_INTERNAL',	0);
 define('ZBX_AUTH_LDAP',		1);

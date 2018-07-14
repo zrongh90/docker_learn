@@ -9,11 +9,14 @@ services:
     # entrypoint: ["nginx", "-g", "daemon off;"]
 
   php:
-    image: zabbix_httpd:1.6
+    image: zabbix_httpd:1.7
     environment:
       TARGET_IP: 
     ports:
      - "80:80"
+    volumes:
+    # mount /var/log/httpd to save log to local node
+     - "/var/log/httpd:/var/log/httpd"
     # entrypoint: ["/usr/sbin/httpd"]
   mysql:
     image: zabbix_mysql:1.1
