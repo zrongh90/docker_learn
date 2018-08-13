@@ -1,5 +1,7 @@
 FROM centos:latest
 MAINTAINER Zirong Huang "397864223@qq.com"
+RUN rm -f /etc/yum.repos.d/*
+COPY repos/*.repo /etc/yum.repos.d/
 RUN yum install -y mariadb-server && yum install -y mariadb
 RUN yum install -y hostname
 RUN mysql_install_db && chown -R mysql:mysql /var/lib/mysql && echo "mysqld_safe --skip-grant-table &" | sh && sleep 5 && \
