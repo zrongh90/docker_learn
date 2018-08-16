@@ -2,14 +2,14 @@ version: "3"
 services:
 
   nginx:
-    image: zrongh/nginx_web:1.2
+    image: zrongh/nginx:lastest
     ports:
      - "8001:8001"
      - "8000:80"
     # entrypoint: ["nginx", "-g", "daemon off;"]
 
   php:
-    image: zabbix_httpd:1.7
+    image: zrongh/zabbix_httpd:lastest
     environment:
       TARGET_IP: 
     ports:
@@ -19,7 +19,7 @@ services:
      - "/var/log/httpd:/var/log/httpd"
     # entrypoint: ["/usr/sbin/httpd"]
   mysql:
-    image: zabbix_mysql:1.1
+    image: zrongh/mysql:lastest
     ports:
      - "3306:3306"
     volumes:
